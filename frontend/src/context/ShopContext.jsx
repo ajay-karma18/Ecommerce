@@ -44,7 +44,7 @@ const ShopContextProvider = (props) => {
         if (token) {
             try {
 
-                await axios.post(backendUrl + '/api/cart/add', { itemId, size }, { headers: { token } })
+                await axios.post('https://ecommerce-1no0.onrender.com' + '/api/cart/add', { itemId, size }, { headers: { token } })
 
             } catch (error) {
                 console.log(error)
@@ -81,7 +81,7 @@ const ShopContextProvider = (props) => {
         if (token) {
             try {
 
-                await axios.post(backendUrl + '/api/cart/update', { itemId, size, quantity }, { headers: { token } })
+                await axios.post('https://ecommerce-1no0.onrender.com' + '/api/cart/update', { itemId, size, quantity }, { headers: { token } })
 
             } catch (error) {
                 console.log(error)
@@ -111,7 +111,7 @@ const ShopContextProvider = (props) => {
     const getProductsData = async () => {
         try {
 
-            const response = await axios.get(backendUrl + '/api/product/list')
+            const response = await axios.get('https://ecommerce-1no0.onrender.com' + '/api/product/list')
             if (response.data.success) {
                 setProducts(response.data.products.reverse())
             } else {
@@ -127,7 +127,7 @@ const ShopContextProvider = (props) => {
     const getUserCart = async ( token ) => {
         try {
             
-            const response = await axios.post(backendUrl + '/api/cart/get',{},{headers:{token}})
+            const response = await axios.post('https://ecommerce-1no0.onrender.com' + '/api/cart/get',{},{headers:{token}})
             if (response.data.success) {
                 setCartItems(response.data.cartData)
             }

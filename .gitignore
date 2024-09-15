@@ -47,6 +47,9 @@ jspm_packages/
 # dotenv environment variables file
 # Ignore the .env file in the parent folder
 ../.env
+./frontend/.env
+./backend/.env
+./admin/.env
 ../.env.local
 ../.env.test
 
