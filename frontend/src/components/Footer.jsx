@@ -9,7 +9,7 @@ const Footer = () => {
         <div>
             <img src={assets.logo} className='mb-5 w-32' alt="" />
             <p className='w-full md:w-2/3 text-gray-600'>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+          Forever is a clothing brand dedicated to providing timeless fashion that transcends trends. Since our founding, we’ve crafted stylish and comfortable pieces for every occasion, ensuring that each item in your wardrobe reflects quality and elegance. Our commitment to sustainability means you can feel good about what you wear, knowing it’s made with care for the planet. Embrace the moments that matter with Forever, where fashion meets lasting memories.
             </p>
         </div>
 
@@ -26,7 +26,7 @@ const Footer = () => {
         <div>
             <p className='text-xl font-medium mb-5'>GET IN TOUCH</p>
             <ul className='flex flex-col gap-1 text-gray-600'>
-                <li>+1-212-456-7890</li>
+                <li>+91-9934758224</li>
                 <li>contact@foreveryou.com</li>
             </ul>
         </div>
