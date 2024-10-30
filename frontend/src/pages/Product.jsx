@@ -33,19 +33,33 @@ const Product = () => {
       {/*----------- Product Data-------------- */}
       <div className='flex gap-12 sm:gap-12 flex-col sm:flex-row'>
 
-        {/*---------- Product Images------------- */}
-        <div className='flex-1 flex flex-col-reverse gap-3 sm:flex-row'>
-          <div className='flex sm:flex-col overflow-x-auto sm:overflow-y-scroll justify-between sm:justify-normal sm:w-[18.7%] w-full'>
-              {
-                productData.image.map((item,index)=>(
-                  <img onClick={()=>setImage(item)} src={item} key={index} className='w-[24%] sm:w-full sm:mb-3 flex-shrink-0 cursor-pointer' alt="" />
-                ))
-              }
-          </div>
-          <div className='w-full sm:w-[80%]'>
-              <img className='w-full h-auto' src={image} alt="" />
-          </div>
-        </div>
+      {/*---------- Product Images------------- */}
+<div className='flex-1 flex flex-col-reverse gap-3 sm:flex-row'>
+  {/* Thumbnail Images Container */}
+  <div className='flex sm:flex-col overflow-x-auto sm:overflow-y-auto justify-between sm:justify-start sm:w-[18.7%] w-full max-h-[300px]'>
+    {
+      productData.image.map((item, index) => (
+        <img 
+          onClick={() => setImage(item)} 
+          src={item} 
+          key={index} 
+          className='w-[60px] h-[60px] sm:w-full sm:h-auto sm:mb-3 cursor-pointer object-cover border' 
+          alt="" 
+        />
+      ))
+    }
+  </div>
+  
+  {/* Main Product Image Container */}
+  <div className='w-full sm:w-[80%] flex items-center justify-center'>
+    <img 
+      className='w-full h-auto max-h-[300px] object-cover' 
+      src={image} 
+      alt="" 
+    />
+  </div>
+</div>
+
 
         {/* -------- Product Info ---------- */}
         <div className='flex-1'>
